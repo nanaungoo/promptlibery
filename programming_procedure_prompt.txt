@@ -1,0 +1,46 @@
+Vibe coding ရဲ့ အနှစ်သာရက AI ကို ကိုယ့်ရဲ့ **Co-pilot** ဒါမှမဟုတ် **Senior Architect** တစ်ယောက်လို သဘောထားပြီး တိုင်ပင်တာ ဖြစ်ပါတယ်။ ပညာရှင်ဆန်ဆန်နဲ့ စနစ်တကျ ရှိစေမယ့် "Master Prompt" တွေကို အဆင့်လိုက် English လို စုစည်းပေးလိုက်ပါတယ်။
+
+---
+
+### Step 1: The "Vision & Strategy" Prompt
+ဒီ Prompt က Project ရဲ့ အစအဆုံး Idea ကို ပုံဖော်ဖို့အတွက်ပါ။
+
+> **Prompt:** "I have an idea for a project called **[Project Name]**. The goal is to **[describe the core problem it solves]**. As a Senior Software Architect, help me define the core features for an **MVP (Minimum Viable Product)**. Focus on high-impact features and user experience. Please provide a clear breakdown of functional requirements and a suggested tech stack that is modern, scalable, and suitable for a Linux-based development environment."
+
+---
+
+### Step 2: The "System Architecture" Prompt
+Project ရဲ့ ကျောရိုး (Database နဲ့ Structure) ကို တည်ဆောက်ဖို့ပါ။
+
+> **Prompt:** "Based on the MVP features we discussed, design the system architecture. I want a clean, modular structure. Please provide:
+> 1. A **Mermaid.js ER Diagram** for the database schema.
+> 2. An API design outline (REST or GraphQL).
+> 3. A professional directory structure that follows industry best practices (e.g., Clean Architecture or Hexagonal Architecture).
+> 4. Recommendations for state management and data persistence."
+
+---
+
+### Step 3: The "Developer Environment & Boilerplate" Prompt
+Coding စရေးလို့ရအောင် အခန်းအပြင်အဆင် ပြင်ဆင်ခိုင်းတာပါ။
+
+> **Prompt:** "Let's set up the development environment. Generate the initial boilerplate for this project. Include:
+> 1. A comprehensive `.gitignore` file for **[Language/Framework]**.
+> 2. A `README.md` with a project overview and setup instructions.
+> 3. Configuration files for linting and formatting (e.g., Prettier, ESLint, or Rustfmt).
+> 4. A shell script or Taskfile to automate the initial setup on a Linux system."
+
+---
+
+### Step 4: The "Actionable Roadmap" Prompt
+အလုပ်တွေကို တစ်ခုချင်းစီ ခွဲထုတ်ခိုင်းတာပါ။
+
+> **Prompt:** "Break this entire project down into small, actionable sprints. Create a **To-Do list** categorized by 'Infrastructure', 'Backend', 'Frontend', and 'Deployment'. For the very first task, give me a detailed 'Step 1' implementation guide so I can start coding immediately with a clear focus."
+
+---
+
+### Tips for Vibe Coders:
+* **"Explain like I'm a Senior":** AI ကို ပညာရှင်စကားလုံးတွေ သုံးခိုင်းချင်ရင် "Explain the underlying logic and design patterns used" လို့ ထည့်ပြောပါ။
+* **"Keep it Lean":** Code တွေ ရှုပ်မသွားအောင် "Prioritize readability and performance. Avoid over-engineering" လို့ မှာထားပါ။
+* **"Iterate":** တစ်ခုခု မကြိုက်ရင် "Let's pivot" ဒါမှမဟုတ် "Let's refine the database part" ဆိုပြီး စိတ်ကြိုက် ပြန်ပြင်ခိုင်းပါ။
+
+
