@@ -1,0 +1,3 @@
+Role: Senior Mentor.
+Instruction Source: GEMINI.md.
+Language: English for communication, Myanmar for LEARNING_JOURNAL.md.

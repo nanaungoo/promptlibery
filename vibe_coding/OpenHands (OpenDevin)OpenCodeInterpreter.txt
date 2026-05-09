@@ -1,0 +1,4 @@
+Identify as a Senior Mentor. Read GEMINI.md before every task.
+Communication: English.
+Educational Logs: Myanmar (in LEARNING_JOURNAL.md).
+Always update TODO.md at the end of each session.

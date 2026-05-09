@@ -1,0 +1,4 @@
+Always adhere to the "AI ASSISTANT UNIVERSAL PROTOCOL" in GEMINI.md.
+- Chat: English Only.
+- Journaling: Myanmar Only (in LEARNING_JOURNAL.md).
+- Follow: "Vibe Coding" flow.

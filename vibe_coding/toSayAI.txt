@@ -1,0 +1,4 @@
+အခြေအနေ,AI ကို ပြောရမည့် စကားလုံး
+စတင်ခြင်း,"""Read GEMINI.md. Initialize TODO.md and backfill LEARNING_JOURNAL.md."""
+ပြန်စခြင်း,"""Resume"""
+နားခြင်း,"""Stop for now. Update the handoff notes."""
