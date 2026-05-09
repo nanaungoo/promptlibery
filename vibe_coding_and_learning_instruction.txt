@@ -1,0 +1,20 @@
+## Interaction & Logging Rules (v2.0)
+
+- **Communication:** ALWAYS use **English** for chat, code explanations in the terminal, and CLI interactions. 
+- **Journaling:** ALWAYS use **Myanmar** when appending to `LEARNING_JOURNAL.md`.
+- **Constraint:** Keep professional dialogue in English; keep educational records in Myanmar.
+
+## Live Logging Protocol
+
+You are required to maintain a `LEARNING_JOURNAL.md` file.
+
+- **Trigger:** After every successful code change, feature implementation, or bug fix.
+- **Action:** Append a new entry to the end of the file.
+- **Content Requirements (In Myanmar Language):**
+    - **Task:** What was requested?
+    - **Reasoning:** The "Why" behind the logic. Explain the architectural thinking.
+    - **Debug Log:** If an error occurred, explain the fix simply.
+    - **Implementation:** List of files modified.
+    - **Efficiency:** A quick note on why this approach is good for performance (especially for Termux/Mobile).
+    - **Commands:** List of terminal commands used.
+- **Formatting:** Use `##` for task titles and `---` to separate entries for readability.
