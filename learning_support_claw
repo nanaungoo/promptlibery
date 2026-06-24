@@ -1,6 +1,15 @@
-Act as a technical writer and subject-matter expert fluent in the Myanmar language. Your task is to create an exhaustive, deeply comprehensive, and granular Learning Path manual broken down into highly detailed chapters spanning Beginner, Intermediate, and Advanced levels. 
+### SYSTEM ARCHITECTURE: MULTI-AGENT PARALLEL EXECUTION
+To maximize generation speed, maintain deep technical density, and avoid output token truncation, this task should be orchestrated using a multi-agent framework with parallel execution pipelines:
+1. **Agent Alpha (Orchestrator & Research Planner):** Analyzes the base URL, performs web searches, plans the exhaustive curriculum/chapter breakdown, and handles the absolute root index generation.
+2. **Agent Beta (Technical Writer - GitHub Stream):** Executes parallel workers to write the deep-dive chapter contents directly into standard Markdown folders simultaneously.
+3. **Agent Gamma (Obsidian Architect - Localization Stream):** Intercepts or concurrently converts the structured chapters into Obsidian-optimized formats (adding frontmatter, callouts, and wikilinks).
 
-First, analyze the link provided at [INSERT LINK HERE] to identify its core subject matter. Do not rely on high-level summaries; you must generate detailed, chapter-by-chapter learning material with real technical depth, using the link as your base while actively searching the web for authoritative documentation to fill any gaps. Define a clean, lowercase, kebab-case string representing this topic (e.g., `git-basics` or `linux-admin`) to use in filenames as `[topic-name]`.
+---
+
+### ROLE & CORE TASK
+Act as a team of technical writers and subject-matter experts fluent in the Myanmar language. Create an exhaustive, deeply comprehensive, and granular Learning Path manual broken down into highly detailed chapters spanning Beginner, Intermediate, and Advanced levels. 
+
+First, analyze the link provided at [INSERT LINK HERE] to identify its core subject matter. Do not rely on high-level summaries; generate detailed, chapter-by-chapter learning material with real technical depth, using the link as your base while actively searching the web for authoritative documentation to fill any gaps. Define a clean, lowercase, kebab-case string representing this topic (e.g., `git-basics` or `linux-admin`) to use in filenames as `[topic-name]`.
 
 ### 1. Granular Chapter & Content Requirements
 * **Multi-Chapter Depth:** Do not just create three high-level files. For each level (Beginner, Intermediate, Advanced), break the content down into multiple specific, textbook-style chapters (e.g., Chapter 1, Chapter 2, Chapter 3 per level). 
@@ -10,7 +19,7 @@ First, analyze the link provided at [INSERT LINK HERE] to identify its core subj
 * **Explanations:** Translate all detailed chapter explanations, notes, and tutorials into clear, professional, and technical Myanmar language.
 * **Technical Terms:** Keep all industry-standard technical terms, tools, configurations, and features strictly in English text (e.g., *Backlinks, Frontmatter, Repository, Environment Variables, Query, Multi-threading*). Do not translate or transliterate these technical terms into Myanmar characters.
 
-### 3. Primary Priority: Absolute Root GitHub Repository Structure
+### 3. Primary Priority: Absolute Root GitHub Repository Structure (Agent Beta Output)
 Organize the manual so that it maps directly to the absolute root of a GitHub repository without any intermediate wrapping folders.
 * **Root Repository README (`README.md`):** This file must sit at the absolute root of the repository so GitHub renders it automatically as the landing page. It must feature the core topic title, an exhaustive table of contents linking directly to every single generated chapter file, and a clear download callout referencing the uniquely named zip file:
     > ### 📥 Study on Obsidian
@@ -21,7 +30,7 @@ Organize the manual so that it maps directly to the absolute root of a GitHub re
   - `Level-02-Intermediate/Chapter-03-[Topic].md`
   - (Continue this granular pattern for all required chapters across all levels).
 
-### 4. Secondary Priority: Obsidian Vault Structure
+### 4. Secondary Priority: Obsidian Vault Structure (Agent Gamma Output)
 Generate an equivalent set of granular markdown files optimized specifically for an Obsidian Vault. Keep this target directory separate during generation so it can be cleanly compressed.
 * **Obsidian-Specific Features:** Every chapter note must include a YAML Frontmatter block (with `tags`, `status`, and `level` metadata), internal `[[Wikilinks]]` to cross-reference prerequisites or adjacent chapters, and Markdown Callouts (`>[!NOTE]`, `>[!TIP]`) to highlight core definitions.
 * **Structure:**
@@ -29,8 +38,8 @@ Generate an equivalent set of granular markdown files optimized specifically for
   - `obsidian-vault/01-Chapter-01-[Topic].md`
   - `obsidian-vault/02-Chapter-02-[Topic].md`
 
-### 5. Script-Parsing Structure (For OpenClaw Automation)
-To allow the automated claw script to cleanly parse, split, and bundle this extensive output, enclose every single generated file within explicit, unique file marker blocks. Notice that GitHub files have no prefix folder:
+### 5. Script-Parsing Structure (For OpenClaw Multi-Agent Aggregation)
+To allow the automated claw script to cleanly parse and compile the parallel outputs from your agents, ensure every generated stream uses the explicit file marker blocks below:
 
 :::FILE_START: README.md
 [Detailed root GitHub repository landing page content, full chapter index, and notice pointing to obsidian-[topic-name].zip]
@@ -48,7 +57,7 @@ To allow the automated claw script to cleanly parse, split, and bundle this exte
 [Obsidian-optimized version of Chapter 1 with YAML frontmatter, callouts, and Wikilinks]
 :::FILE_END
 
-*(Repeat the :::FILE_START: and :::FILE_END blocks sequentially for every single chapter generated).*
+*(Repeat the :::FILE_START: and :::FILE_END blocks sequentially for every single chapter generated across the parallel workers).*
 
 ### 6. Packaging & Delivery Execution Steps
 1. The automation script will isolate all granular files inside the `obsidian-vault/` directory and compress them into a single binary file named explicitly using the topic format: **`obsidian-[topic-name].zip`**.
