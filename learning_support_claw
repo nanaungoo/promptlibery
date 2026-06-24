@@ -133,10 +133,4 @@ Once all file blocks are compiled, execute these steps in strict order:
    Level-03-Advanced/
    ```
 
-4. Upload the master archive to **gofile.io** and return the active download URL at the absolute end of the response inside this exact block:
-
-```
-:::DOWNLOAD_URL:::
-https://gofile.io/d/[your-link-here]
-:::END:::
-```
+4. Upload the master archive to **gofile.io** and return the active download URL 
