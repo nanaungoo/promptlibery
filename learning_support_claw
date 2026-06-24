@@ -1,66 +1,83 @@
-### SYSTEM ARCHITECTURE: MULTI-AGENT PARALLEL EXECUTION
-To maximize generation speed, maintain deep technical density, and avoid output token truncation, this task should be orchestrated using a multi-agent framework with parallel execution pipelines:
-1. **Agent Alpha (Orchestrator & Research Planner):** Analyzes the base URL, performs web searches, plans the exhaustive curriculum/chapter breakdown, and handles the absolute root index generation.
-2. **Agent Beta (Technical Writer - GitHub Stream):** Executes parallel workers to write the deep-dive chapter contents directly into standard Markdown folders simultaneously.
-3. **Agent Gamma (Obsidian Architect - Localization Stream):** Intercepts or concurrently converts the structured chapters into Obsidian-optimized formats (adding frontmatter, callouts, and wikilinks).
+### SYSTEM ARCHITECTURE: MULTI-AGENT PARALLEL MANIFEST PIPELINE
+To ensure maximum parallel execution speed, prevent context-window timeouts, and enforce absolute pedagogical depth, the framework must operate as follows:
+1. **Agent Alpha (The Research Planner):** Executes the deep Resource Discovery phase, analyzes the target URL, maps out the comprehensive chapter syllabus, and creates a static manifest.
+2. **Agent Beta (Parallel GitHub Writers):** Processes chapters concurrently based on the manifest. Every chapter file is generated independently using a strict structural template.
+3. **Agent Gamma (Obsidian Compiler):** Concurrently converts the parallel streams into Obsidian-optimized notes, injecting YAML frontmatter, bi-directional wikilinks, and callouts.
 
 ---
 
 ### ROLE & CORE TASK
-Act as a team of technical writers and subject-matter experts fluent in the Myanmar language. Create an exhaustive, deeply comprehensive, and granular Learning Path manual broken down into highly detailed chapters spanning Beginner, Intermediate, and Advanced levels. 
+You are an elite team of computer science educators, technical writers, and AI automation experts fluent in the Myanmar language. Your task is to generate a complete, deeply comprehensive, and granular Learning Path manual for the topic found at:
+**SOURCE URL:** [PASTE YOUR URL HERE — required before sending]
 
-First, analyze the link provided at [INSERT LINK HERE] to identify its core subject matter. Do not rely on high-level summaries; generate detailed, chapter-by-chapter learning material with real technical depth, using the link as your base while actively searching the web for authoritative documentation to fill any gaps. Define a clean, lowercase, kebab-case string representing this topic (e.g., `git-basics` or `linux-admin`) to use in filenames as `[topic-name]`.
+### 1. Resource Discovery Engine (Required Before Writing)
+Before generating any markdown content, Agent Alpha must actively research and compile supporting materials from the following source channels to ensure the curriculum is robust and world-class:
+* **Official Documentation:** The tool/language's own official documentation site (e.g., docs.python.org, docs.docker.com, obsidian.md/help).
+* **GitHub Repositories:** Official repositories, production codebases, READMEs, and changelogs for version-accurate details.
+* **Community Curricula:** Open syllabi and learning frameworks from roadmap.sh, freeCodeCamp, or The Odin Project.
+* **Video Course Outlines:** Instructional topic sequencing from elite Coursera, Udemy, or YouTube educational playlists.
+* **Stack Overflow / Developer Forums:** High-yield Q&A threads used specifically to mine real-world pitfalls for the troubleshooting sections.
 
-### 1. Granular Chapter & Content Requirements
-* **Multi-Chapter Depth:** Do not just create three high-level files. For each level (Beginner, Intermediate, Advanced), break the content down into multiple specific, textbook-style chapters (e.g., Chapter 1, Chapter 2, Chapter 3 per level). 
-* **Deep Material:** Each chapter must contain comprehensive conceptual explanations, practical step-by-step workflows, and concrete examples, rather than simple outlines or bullet points.
+*Constraint:* Cross-reference at least 3 authoritative sources per learning level (Beginner / Intermediate / Advanced). Prioritize modern practices updated recently. Derive a clean, lowercase kebab-case identifier from the topic to use as `[topic-name]` in all file architectures.
 
 ### 2. Language & Localization Rules
-* **Explanations:** Translate all detailed chapter explanations, notes, and tutorials into clear, professional, and technical Myanmar language.
-* **Technical Terms:** Keep all industry-standard technical terms, tools, configurations, and features strictly in English text (e.g., *Backlinks, Frontmatter, Repository, Environment Variables, Query, Multi-threading*). Do not translate or transliterate these technical terms into Myanmar characters.
+* **Explanations:** Write all conceptual guides, step-by-step instructions, and troubleshooting paragraphs in clear, professional Myanmar (Burmese) script.
+* **Technical Terms:** Keep all code keywords, CLI commands, tool names, configurations, and UI labels strictly in English text (e.g., *Repository, Branching, Frontmatter, Backlinks, Environment Variables*). Do not translate or transliterate these technical terms into Myanmar script.
 
-### 3. Primary Priority: Absolute Root GitHub Repository Structure (Agent Beta Output)
-Organize the manual so that it maps directly to the absolute root of a GitHub repository without any intermediate wrapping folders.
-* **Root Repository README (`README.md`):** This file must sit at the absolute root of the repository so GitHub renders it automatically as the landing page. It must feature the core topic title, an exhaustive table of contents linking directly to every single generated chapter file, and a clear download callout referencing the uniquely named zip file:
+### 3. Strict Chapter Template (Required for Every Chapter File)
+To ensure structural consistency across parallel workers, every single chapter file must rigidly follow this exact six-part layout:
+1. **Chapter Title:** English title + explicit Myanmar subtitle.
+2. **Metadata Box:** Estimated Time to Complete | Explicit Prerequisites.
+3. **Core Concepts:** Deep-dive technical explanations in Myanmar script with English technical terms inline.
+4. **Hands-on Practice:** A concrete, reproducible, step-by-step terminal or UI walkthrough.
+5. **Pitfalls & Troubleshooting:** 2-3 common mistakes and their immediate fixes (sourced from developer community forums).
+6. **Active Recall Quiz:** 3 interactive Q&A pairs formatted for student self-testing.
+
+### 4. Primary Priority: Absolute Root GitHub Repository Structure
+Organize the codebase so that it maps directly to the absolute root of a GitHub repository without any intermediate wrapper folders:
+* **`README.md` (Root Index):** Sits at the absolute root so it renders natively on the GitHub homepage. It must feature the core topic title, a full scannable table of contents linking directly to every level folder and chapter file, and this exact notice block:
     > ### 📥 Study on Obsidian
-    > For an interactive, offline study experience with bi-directional linking, download the **`obsidian-[topic-name].zip`** file located in the root folder of this repository, extract it, and open it directly as a vault in Obsidian.
-* **Granular Level Folders at Root:** Folders must be created directly at the root level:
-  - `Level-01-Beginner/Chapter-01-[Topic].md`
-  - `Level-01-Beginner/Chapter-02-[Topic].md`
-  - `Level-02-Intermediate/Chapter-03-[Topic].md`
-  - (Continue this granular pattern for all required chapters across all levels).
+    > For offline study with bi-directional linking and spaced repetition, download **`obsidian-[topic-name].zip`** from the root of this repository, extract it, and open it as a vault in Obsidian.
+* **Folder Hierarchy:**
+  - `Level-01-Beginner/Chapter-01-[slug].md`
+  - `Level-01-Beginner/Chapter-02-[slug].md`
+  - `Level-02-Intermediate/Chapter-03-[slug].md`
+  - `Level-03-Advanced/Chapter-N-[slug].md`
 
-### 4. Secondary Priority: Obsidian Vault Structure (Agent Gamma Output)
-Generate an equivalent set of granular markdown files optimized specifically for an Obsidian Vault. Keep this target directory separate during generation so it can be cleanly compressed.
-* **Obsidian-Specific Features:** Every chapter note must include a YAML Frontmatter block (with `tags`, `status`, and `level` metadata), internal `[[Wikilinks]]` to cross-reference prerequisites or adjacent chapters, and Markdown Callouts (`>[!NOTE]`, `>[!TIP]`) to highlight core definitions.
-* **Structure:**
-  - `obsidian-vault/00-[topic-name]-MOC.md` (A comprehensive Map of Content homepage linking to all chapters)
-  - `obsidian-vault/01-Chapter-01-[Topic].md`
-  - `obsidian-vault/02-Chapter-02-[Topic].md`
+### 5. Secondary Priority: Obsidian Vault Structure (Mirrored)
+Generate a parallel set of Obsidian-optimized notes. To maintain clear compilation tracks, generate all GitHub repository files first, followed by all Obsidian vault files in sequence.
+* **Folder Hierarchy:**
+  - `obsidian-vault/00-[topic-name]-MOC.md` (Central Map of Content homepage)
+  - `obsidian-vault/01-Chapter-01-[slug].md`
+  - `obsidian-vault/02-Chapter-02-[slug].md`
+* **Obsidian Integrations:** Every note must contain an automated YAML Frontmatter block (`tags: [topic, level]`, `status: to-do`), internal `[[Wikilinks]]` pointing to the previous and next sequential chapters, and at least one visual Callout block (`>[!TIP]`, `>[!CAUTION]`).
 
-### 5. Script-Parsing Structure (For OpenClaw Multi-Agent Aggregation)
-To allow the automated claw script to cleanly parse and compile the parallel outputs from your agents, ensure every generated stream uses the explicit file marker blocks below:
+### 6. Output Format (Parser-Safe File Blocks)
+Wrap every generated file cleanly within these precise delimiters so the OpenClaw automated parser can extract and write the files flawlessly:
 
 :::FILE_START: README.md
-[Detailed root GitHub repository landing page content, full chapter index, and notice pointing to obsidian-[topic-name].zip]
+[content]
 :::FILE_END
 
-:::FILE_START: Level-01-Beginner/Chapter-01-[Topic].md
-[Deep-dive, comprehensive learning material for Chapter 1 in Myanmar language]
+:::FILE_START: Level-01-Beginner/Chapter-01-[slug].md
+[content]
 :::FILE_END
 
 :::FILE_START: obsidian-vault/00-[topic-name]-MOC.md
-[Obsidian central Map of Content note with YAML and Wikilinks]
+[content]
 :::FILE_END
 
-:::FILE_START: obsidian-vault/01-Chapter-01-[Topic].md
-[Obsidian-optimized version of Chapter 1 with YAML frontmatter, callouts, and Wikilinks]
+:::FILE_START: obsidian-vault/01-Chapter-01-[slug].md
+[content]
 :::FILE_END
 
-*(Repeat the :::FILE_START: and :::FILE_END blocks sequentially for every single chapter generated across the parallel workers).*
+### 7. Packaging & Delivery Execution
+Once all file blocks are generated, the automation pipeline must execute these steps in strict order:
+1. Isolate all markdown files inside the `obsidian-vault/` directory and compress them into a standalone archive named **`obsidian-[topic-name].zip`**.
+2. Place `obsidian-[topic-name].zip` directly at the repository root level alongside `README.md` and the `Level-XX/` folders.
+3. Compress the repository root contents directly (**no parent wrapping folder**), ensuring that the top tier of the master archive contains natively: `README.md`, `obsidian-[topic-name].zip`, and the `Level-XX` directories.
+4. Upload this master archive to gofile.io and return the active download URL at the absolute end of the final response inside this exact programmatic block:
 
-### 6. Packaging & Delivery Execution Steps
-1. The automation script will isolate all granular files inside the `obsidian-vault/` directory and compress them into a single binary file named explicitly using the topic format: **`obsidian-[topic-name].zip`**.
-2. Place this newly generated `obsidian-[topic-name].zip` directly at the absolute root level (right alongside `README.md`).
-3. Compress the final repository contents. **Crucial:** The automation script must compress the *contents* of the repository directory directly, ensuring that `README.md`, `obsidian-[topic-name].zip`, and the `Level-XX` folders sit at the top level of the master zip file, rather than being wrapped inside an extra parent folder.
-4. Upload this master compressed repository package to the temporary file-sharing site **gofile** and output the active, functional download link in your final response.
+:::DOWNLOAD_URL:::
+https://gofile.io/d/[your-link-here]
+:::END:::
