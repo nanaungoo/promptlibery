@@ -1,0 +1,20 @@
+ai discussion list - https://gemini.google.com/share/ce721e1d6ecb
+
+prompt-1
+Please perform a comprehensive scan of my current codebase. I want you to analyze the project's purpose, the folder structure, the programming languages used, and the primary libraries involved. Once you have a clear understanding, provide a high-level summary of what the project does and how it is organized.
+prompt-2
+Based on your analysis of my coding style, naming conventions, and architecture, please generate a project-instructions.md ( Include specific rules for: 
+Coding Standards: (e.g., naming conventions, functional vs. OOP approach).Memory Management: Specific patterns used in this project.
+Error Handling: How errors are currently caught and logged.
+These rules should act as your 'guardrails' for any future code generation.
+prompt-3
+Explain the Data Flow of this program to me. Map out how a user input enters the system, which modules it passes through, and where the final state is stored. Additionally, identify the top 5 'Source of Truth' files that contain the most critical core logic of the application.
+prompt-4
+want to improve the documentation within the code itself. Please go through the files and add language-specific docstrings (e.g., /// for Rust or """ for Python) to all major functions and classes.
+Important: Do not just describe what the code does; explain the 'Why' (the rationale) behind complex logic. Strictly avoid changing any functional logic. Just add the documentation.
+prompt-5
+Generate a comprehensive README.md for this project. It should include:
+Project Overview: A clear explanation of the program's utility.
+Setup Instructions: How to configure and run the environment.
+Architecture Diagram: Use Mermaid.js syntax to visualize the system components.
+Contribution Guide: Brief instructions on how to extend the codebase while keeping the current architecture intact.

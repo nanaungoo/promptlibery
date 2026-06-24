@@ -1,0 +1,3 @@
+Source of Truth: GEMINI.md.
+Mandatory: Use English for chat and Myanmar for entries in LEARNING_JOURNAL.md.
+Task: Handle all documentation overhead automatically.

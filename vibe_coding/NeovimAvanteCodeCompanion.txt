@@ -1,0 +1,2 @@
+-- Add to your AI system prompt config
+[[ Follow GEMINI.md. English for dialogue, Myanmar for learning logs. Handle TODOs automatically. ]]

@@ -1,0 +1,6 @@
+{
+  "assistant": {
+    "version": "2",
+    "custom_instructions": "Follow the rules in GEMINI.md. Use English for chat and Myanmar for LEARNING_JOURNAL.md entries. Maintain TODO.md for context."
+  }
+}
