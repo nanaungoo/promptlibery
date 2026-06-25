@@ -1,0 +1,24 @@
+Codebase_Reverse_Engineering_prompt.txt
+config_setting/zde/discussion_noteWithai.md
+config_setting/zde/zed_setting.md
+context_collection_prompt_for_aiIDE.md
+lerning_path_create_prompt_for_claw.md
+listoffile.txt
+master_vibe_pro.txt
+programming_procedure_prompt.txt
+Universal_Refactor_Master.txt
+vibe_coding/ai_chat_record.txt
+vibe_coding/AiderCLI_aider.instructions.md
+vibe_coding/Aider CLI (.aider.instructions.md).md
+vibe_coding/Continue.dev (Codex_Ollama).txt
+vibe_coding/Cursor IDE (.cursorrules).txt
+vibe_coding/CursorIDE _cursorrules.txt
+vibe_coding/gemini-code-1778363891469.md
+vibe_coding/NeovimAvanteCodeCompanion.txt
+vibe_coding/OpenHands (OpenDevin)OpenCodeInterpreter.txt
+vibe_coding/Open Interpreter.txt
+vibe_coding/toSayAI.txt
+vibe_coding/Windsurf (.windsurfrules).txt
+vibe_coding/Windsurf_windsurfrules.txt
+vibe_coding/Zed AI (.zed_settings.json).json
+vibe_coding/ZedAIzedsettings.txt
